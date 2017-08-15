@@ -94,17 +94,17 @@
 
 
 
-<meta name="description" content="How to Build Homepage 0Basic Env Requirements Github Account Git Node.js Hexo  Install Git Windows: Download and Install git Linux (Ubuntu): $ sudo apt-get install git    使用Windows的用户可以通过git中自带的git ba">
+<meta name="description" content="How to Build Homepage 1Basic Env Requirements Github Account Git Node.js Hexo  Install Git Windows: Download and Install git Linux (Ubuntu): $ sudo apt-get install git    使用Windows的用户可以通过git中自带的git ba">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to Build Homepage">
 <meta property="og:url" content="http://yoursite.com/2017/08/15/how-to-build-my-homepage/index.html">
 <meta property="og:site_name" content="Homepage of Yufan Su">
-<meta property="og:description" content="How to Build Homepage 0Basic Env Requirements Github Account Git Node.js Hexo  Install Git Windows: Download and Install git Linux (Ubuntu): $ sudo apt-get install git    使用Windows的用户可以通过git中自带的git ba">
+<meta property="og:description" content="How to Build Homepage 1Basic Env Requirements Github Account Git Node.js Hexo  Install Git Windows: Download and Install git Linux (Ubuntu): $ sudo apt-get install git    使用Windows的用户可以通过git中自带的git ba">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-15T21:12:49.646Z">
+<meta property="og:updated_time" content="2017-08-15T21:42:29.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Build Homepage">
-<meta name="twitter:description" content="How to Build Homepage 0Basic Env Requirements Github Account Git Node.js Hexo  Install Git Windows: Download and Install git Linux (Ubuntu): $ sudo apt-get install git    使用Windows的用户可以通过git中自带的git ba">
+<meta name="twitter:description" content="How to Build Homepage 1Basic Env Requirements Github Account Git Node.js Hexo  Install Git Windows: Download and Install git Linux (Ubuntu): $ sudo apt-get install git    使用Windows的用户可以通过git中自带的git ba">
 
 
 
@@ -323,7 +323,7 @@
       
 
       
-        <h1 id="How-to-Build-Homepage-0"><a href="#How-to-Build-Homepage-0" class="headerlink" title="How to Build Homepage 0"></a>How to Build Homepage 0</h1><h2 id="Basic-Env-Requirements"><a href="#Basic-Env-Requirements" class="headerlink" title="Basic Env Requirements"></a>Basic Env Requirements</h2><ul>
+        <h1 id="How-to-Build-Homepage-1"><a href="#How-to-Build-Homepage-1" class="headerlink" title="How to Build Homepage 1"></a>How to Build Homepage 1</h1><h2 id="Basic-Env-Requirements"><a href="#Basic-Env-Requirements" class="headerlink" title="Basic Env Requirements"></a>Basic Env Requirements</h2><ul>
 <li><a href="https://github.com" target="_blank" rel="external">Github Account</a></li>
 <li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
@@ -359,7 +359,22 @@
 <li><code>cd &lt;folder-name&gt;</code></li>
 <li><code>npm install</code></li>
 </ul>
-
+<h3 id="Build-on-localhost"><a href="#Build-on-localhost" class="headerlink" title="Build on localhost"></a>Build on localhost</h3><ul>
+<li><code>hexo generate</code></li>
+<li><code>hexo server</code></li>
+<li>view it on <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
+<li>Now you can see the website generated from templates in Hexo.</li>
+</ul>
+<h3 id="Connect-to-Github-Repo"><a href="#Connect-to-Github-Repo" class="headerlink" title="Connect to Github Repo"></a>Connect to Github Repo</h3><ul>
+<li>create a folder called <code>.deploy</code></li>
+<li>clone the repo to it, <code>git clone https://github.com/{username}/{username}.github.io.git</code></li>
+<li><p>create a shell script to deploy the website</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">cp -R public/* .deploy/&#123;username&#125;.github.io</div><div class="line"><span class="built_in">cd</span> .deploy/&#123;username&#125;.github.io/</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"update homepage"</span></div><div class="line">git push origin master</div><div class="line"><span class="built_in">cd</span> ..</div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+</li>
+<li><p>Now view the result on your website, {username}.github.io</p>
+</li>
+</ul>
+<h2 id="My-Personal-Setup"><a href="#My-Personal-Setup" class="headerlink" title="My Personal Setup"></a>My Personal Setup</h2>
       
     </div>
     
@@ -529,7 +544,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-Build-Homepage-0"><span class="nav-number">1.</span> <span class="nav-text">How to Build Homepage 0</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Env-Requirements"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Env Requirements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">Install Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">1.1.3.</span> <span class="nav-text">Install Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-Your-Github-Account-and-Repo"><span class="nav-number">1.1.4.</span> <span class="nav-text">Get Your Github Account and Repo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-Your-Own-Homepage-with-Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">Build Your Own Homepage with Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-up-the-folder"><span class="nav-number">1.2.1.</span> <span class="nav-text">Set up the folder</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-Build-Homepage-1"><span class="nav-number">1.</span> <span class="nav-text">How to Build Homepage 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Env-Requirements"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Env Requirements</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">Install Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Hexo"><span class="nav-number">1.1.3.</span> <span class="nav-text">Install Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Get-Your-Github-Account-and-Repo"><span class="nav-number">1.1.4.</span> <span class="nav-text">Get Your Github Account and Repo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-Your-Own-Homepage-with-Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">Build Your Own Homepage with Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set-up-the-folder"><span class="nav-number">1.2.1.</span> <span class="nav-text">Set up the folder</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Build-on-localhost"><span class="nav-number">1.2.2.</span> <span class="nav-text">Build on localhost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Connect-to-Github-Repo"><span class="nav-number">1.2.3.</span> <span class="nav-text">Connect to Github Repo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#My-Personal-Setup"><span class="nav-number">1.3.</span> <span class="nav-text">My Personal Setup</span></a></li></ol></li></ol></div>
             
 
           </div>

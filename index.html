@@ -328,7 +328,7 @@
       
         
           
-            <h1 id="How-to-Build-Homepage-0"><a href="#How-to-Build-Homepage-0" class="headerlink" title="How to Build Homepage 0"></a>How to Build Homepage 0</h1><h2 id="Basic-Env-Requirements"><a href="#Basic-Env-Requirements" class="headerlink" title="Basic Env Requirements"></a>Basic Env Requirements</h2><ul>
+            <h1 id="How-to-Build-Homepage-1"><a href="#How-to-Build-Homepage-1" class="headerlink" title="How to Build Homepage 1"></a>How to Build Homepage 1</h1><h2 id="Basic-Env-Requirements"><a href="#Basic-Env-Requirements" class="headerlink" title="Basic Env Requirements"></a>Basic Env Requirements</h2><ul>
 <li><a href="https://github.com" target="_blank" rel="external">Github Account</a></li>
 <li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
@@ -364,7 +364,22 @@
 <li><code>cd &lt;folder-name&gt;</code></li>
 <li><code>npm install</code></li>
 </ul>
-
+<h3 id="Build-on-localhost"><a href="#Build-on-localhost" class="headerlink" title="Build on localhost"></a>Build on localhost</h3><ul>
+<li><code>hexo generate</code></li>
+<li><code>hexo server</code></li>
+<li>view it on <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></li>
+<li>Now you can see the website generated from templates in Hexo.</li>
+</ul>
+<h3 id="Connect-to-Github-Repo"><a href="#Connect-to-Github-Repo" class="headerlink" title="Connect to Github Repo"></a>Connect to Github Repo</h3><ul>
+<li>create a folder called <code>.deploy</code></li>
+<li>clone the repo to it, <code>git clone https://github.com/{username}/{username}.github.io.git</code></li>
+<li><p>create a shell script to deploy the website</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">cp -R public/* .deploy/&#123;username&#125;.github.io</div><div class="line"><span class="built_in">cd</span> .deploy/&#123;username&#125;.github.io/</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"update homepage"</span></div><div class="line">git push origin master</div><div class="line"><span class="built_in">cd</span> ..</div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
+</li>
+<li><p>Now view the result on your website, {username}.github.io</p>
+</li>
+</ul>
+<h2 id="My-Personal-Setup"><a href="#My-Personal-Setup" class="headerlink" title="My Personal Setup"></a>My Personal Setup</h2>
           
         
       
