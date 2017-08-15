@@ -328,7 +328,7 @@
       
         
           
-            <h1 id="How-to-Build-Homepage-1"><a href="#How-to-Build-Homepage-1" class="headerlink" title="How to Build Homepage 1"></a>How to Build Homepage 1</h1><h2 id="Basic-Env-Requirements"><a href="#Basic-Env-Requirements" class="headerlink" title="Basic Env Requirements"></a>Basic Env Requirements</h2><ul>
+            <h1 id="Basic-Env-Requirements"><a href="#Basic-Env-Requirements" class="headerlink" title="Basic Env Requirements"></a>Basic Env Requirements</h1><ul>
 <li><a href="https://github.com" target="_blank" rel="external">Github Account</a></li>
 <li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
@@ -359,10 +359,10 @@
 <li>Create a new reposity</li>
 <li>Set the repo name to {username}.github.io</li>
 </ol>
-<h2 id="Build-Your-Own-Homepage-with-Hexo"><a href="#Build-Your-Own-Homepage-with-Hexo" class="headerlink" title="Build Your Own Homepage with Hexo"></a>Build Your Own Homepage with Hexo</h2><h3 id="Set-up-the-folder"><a href="#Set-up-the-folder" class="headerlink" title="Set up the folder"></a>Set up the folder</h3><ul>
-<li><code>hexo init &lt;folder-name&gt;</code></li>
-<li><code>cd &lt;folder-name&gt;</code></li>
-<li><code>npm install</code></li>
+<h1 id="Build-Your-Own-Homepage-with-Hexo"><a href="#Build-Your-Own-Homepage-with-Hexo" class="headerlink" title="Build Your Own Homepage with Hexo"></a>Build Your Own Homepage with Hexo</h1><h3 id="Set-up-the-folder"><a href="#Set-up-the-folder" class="headerlink" title="Set up the folder"></a>Set up the folder</h3><ul>
+<li><code>$ hexo init &lt;folder-name&gt;</code></li>
+<li><code>$ cd &lt;folder-name&gt;</code></li>
+<li><code>$ npm install</code></li>
 </ul>
 <h3 id="Build-on-localhost"><a href="#Build-on-localhost" class="headerlink" title="Build on localhost"></a>Build on localhost</h3><ul>
 <li><code>hexo generate</code></li>
@@ -372,16 +372,21 @@
 </ul>
 <h3 id="Connect-to-Github-Repo"><a href="#Connect-to-Github-Repo" class="headerlink" title="Connect to Github Repo"></a>Connect to Github Repo</h3><ul>
 <li>create a folder called <code>.deploy</code></li>
-<li>clone the repo to it, <code>git clone https://github.com/{username}/{username}.github.io.git</code></li>
+<li>clone the repo to it, <code>$ git clone https://github.com/{username}/{username}.github.io.git</code></li>
 <li><p>create a shell script to deploy the website</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">cp -R public/* .deploy/&#123;username&#125;.github.io</div><div class="line"><span class="built_in">cd</span> .deploy/&#123;username&#125;.github.io/</div><div class="line">git add .</div><div class="line">git commit -m <span class="string">"update homepage"</span></div><div class="line">git push origin master</div><div class="line"><span class="built_in">cd</span> ..</div><div class="line"><span class="built_in">cd</span> ..</div></pre></td></tr></table></figure>
 </li>
-<li><p>Now view the result on your website, {username}.github.io</p>
+<li><p>change mode of deploy.sh, <code>$ chmod +x deploy.sh</code></p>
 </li>
+<li>Now view the result on your website, {username}.github.io</li>
 </ul>
-<h2 id="My-Personal-Setup"><a href="#My-Personal-Setup" class="headerlink" title="My Personal Setup"></a>My Personal Setup</h2><h3 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h3><ul>
+<h1 id="My-Personal-Setup"><a href="#My-Personal-Setup" class="headerlink" title="My Personal Setup"></a>My Personal Setup</h1><h3 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h3><ul>
 <li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next</a></li>
 <li>Schema: pisces</li>
+</ul>
+<h3 id="More-Information"><a href="#More-Information" class="headerlink" title="More Information"></a>More Information</h3><ul>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="external">Hexo doc</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Next Theme</a></li>
 </ul>
 
           
